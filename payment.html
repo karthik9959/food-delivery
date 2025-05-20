@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomato - Payment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Payment</h1>
+        <h2>Total: ₹<span id="total-amount">500</span></h2>
+
+        <h2>Select Payment Method</h2>
+        <div class="payment-method" onclick="selectPaymentMethod('upi')">
+            <img src="upi-logo.svg" alt="UPI">
+            <span>UPI</span>
+        </div>
+        <div class="payment-method" onclick="selectPaymentMethod('credit')">
+            <img src="credit-card-icon.png" alt="Credit/Debit Card">
+            <span>Credit/Debit Card</span>
+        </div>
+        <div class="payment-method" onclick="selectPaymentMethod('cod')">
+            <img src="cash-icon.png" alt="Cash on Delivery">
+            <span>Cash on Delivery</span>
+        </div>
+
+        <button id="confirm-btn" onclick="confirmPayment()">Confirm Payment</button>
+    </div>
+
+    <script>
+        let selectedPaymentMethod = '';
+        function selectPaymentMethod(method) {
+            selectedPaymentMethod = method;
+            document.querySelectorAll('.payment-method').forEach(el => el.classList.remove('selected'));
+            event.currentTarget.classList.add('selected');
+        }
+
+        function confirmPayment() {
+            if (!selectedPaymentMethod) {
+                alert("Please select a payment method.");
+                return;
+            }
+            alert(`Payment confirmed using ${selectedPaymentMethod.toUpperCase()}!`);
+        }
+    </script>
+</body>
+</html>

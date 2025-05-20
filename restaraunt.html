@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Menu - Tomato</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Restaurant A</h1>
+            <button class="back-btn" onclick="goBack()">← Back</button>
+        </div>
+    </header>
+
+    <section id="menu" class="menu-section">
+        <h2>Menu</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="dish1.jpg" alt="Dish 1">
+                <div class="menu-info">
+                    <h3>Pizza Margherita</h3>
+                    <p>₹250 • Classic Cheese Pizza</p>
+                    <button class="btn-add" onclick="addToCart('Pizza Margherita', 250)">Add to Cart</button>
+                </div>
+            </div>
+            <div class="menu-item">
+                <img src="dish2.jpg" alt="Dish 2">
+                <div class="menu-info">
+                    <h3>Spaghetti Bolognese</h3>
+                    <p>₹300 • Italian Pasta</p>
+                    <button class="btn-add" onclick="addToCart('Spaghetti Bolognese', 300)">Add to Cart</button>
+                </div>
+            </div>
+            <!-- Add more menu items dynamically -->
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

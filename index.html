@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tomato - Online Food Delivery</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Sticky Header with Search and Cart -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Tomato</h1>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search for restaurants or dishes..." id="search-input">
+                <button id="search-btn"><img src="search-icon.png" alt="Search"></button>
+            </div>
+            <div class="cart">
+                <span id="cart-count">0</span>
+                <img src="cart-icon.png" alt="Cart">
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section for Promotions or Offers -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Order Food Online from Your Favorite Restaurants</h2>
+            <p>Get the best food delivered fast at your doorstep!</p>
+        </div>
+        <img src="hero-image.jpg" alt="Delicious Food" class="hero-img">
+    </section>
+
+    <!-- Restaurant Listings with Filters -->
+    <section id="restaurants" class="restaurants-section">
+        <h2>Popular Restaurants Near You</h2>
+        <div class="filters">
+            <button class="filter-btn">All</button>
+            <button class="filter-btn">Offers</button>
+            <button class="filter-btn">Ratings 4.0+</button>
+            <button class="filter-btn">Free Delivery</button>
+        </div>
+        <div class="restaurant-grid">
+            <!-- Dynamic Restaurant Cards -->
+            <div class="restaurant-card">
+                <img src="restaurant1.jpg" alt="Restaurant 1">
+                <div class="restaurant-info">
+                    <h3>Restaurant A</h3>
+                    <p>Italian, Pizza • 30-40 mins • ₹200 for two</p>
+                    <span class="rating">4.5 ★</span>
+                    <span class="offer">20% OFF</span>
+                </div>
+            </div>
+            <div class="restaurant-card">
+                <img src="restaurant2.jpg" alt="Restaurant 2">
+                <div class="restaurant-info">
+                    <h3>Restaurant B</h3>
+                    <p>Burgers, Fast Food • 20-30 mins • ₹150 for two</p>
+                    <span class="rating">4.3 ★</span>
+                    <span class="offer">Free Delivery</span>
+                </div>
+            </div>
+            <!-- Add more restaurant cards dynamically -->
+        </div>
+    </section>
+
+    <!-- Include script -->
+    <script src="script.js"></script>
+</body>
+</html>
